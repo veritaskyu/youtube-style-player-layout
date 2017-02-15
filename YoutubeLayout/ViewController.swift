@@ -19,6 +19,10 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
 
     @IBAction func playAction(_ sender: Any) {
         NotificationCenter.default.post(name: NSNotification.Name("open"), object: nil)
